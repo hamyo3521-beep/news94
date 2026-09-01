@@ -3,219 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>데일리 브리핑 · 2026년 8월 30일 (일)</title>
+<title>데일리 브리핑 · 2026년 9월 2일 (수)</title>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1c2733;        /* 비 오는 날의 짙은 먹색 */
-    --slate:#46586b;      /* 젖은 슬레이트 */
-    --mist:#eef2f5;       /* 안개 배경 */
-    --paper:#fbfcfd;
-    --rain:#3d7ea6;       /* 빗물 블루 */
-    --rain-deep:#2b5d7d;
-    --line:#d7dfe6;
-    --amber:#b0782f;      /* 주의(호우) 표시용 */
+    --ink:#1c2733; --slate:#46586b; --mist:#eef2f5; --paper:#fbfcfd;
+    --rain:#3d7ea6; --rain-deep:#2b5d7d; --line:#d7dfe6;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family:'IBM Plex Sans KR',-apple-system,sans-serif;
-    background:var(--mist);
-    color:var(--ink);
-    line-height:1.7;
-  }
+  body{font-family:'IBM Plex Sans KR',-apple-system,sans-serif;
+    background:var(--mist);color:var(--ink);line-height:1.7;}
   .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
-
-  /* ── 헤더 ── */
-  header{
-    padding:56px 0 32px;
-    border-bottom:2px solid var(--ink);
-  }
-  .kicker{
-    font-size:13px;letter-spacing:.22em;color:var(--rain-deep);
-    font-weight:600;text-transform:uppercase;margin-bottom:14px;
-  }
-  h1{
-    font-family:'Gowun Batang',serif;
-    font-size:clamp(30px,6vw,44px);
-    font-weight:700;line-height:1.25;
-  }
+  header{padding:56px 0 32px;border-bottom:2px solid var(--ink);}
+  .kicker{font-size:13px;letter-spacing:.22em;color:var(--rain-deep);
+    font-weight:600;text-transform:uppercase;margin-bottom:14px;}
+  h1{font-family:'Gowun Batang',serif;font-size:clamp(30px,6vw,44px);
+    font-weight:700;line-height:1.25;}
   .meta{margin-top:16px;font-size:15px;color:var(--slate);}
   .meta strong{color:var(--ink);font-weight:600;}
-
-  /* ── 섹션 공통 ── */
   section{margin-top:48px;}
-  .sec-label{
-    display:flex;align-items:baseline;gap:12px;
-    margin-bottom:20px;
-  }
-  .sec-label h2{
-    font-family:'Gowun Batang',serif;
-    font-size:22px;font-weight:700;
-  }
-  .sec-label .en{
-    font-size:12px;letter-spacing:.18em;color:var(--slate);
-  }
-
-  /* ── 날씨 카드 ── */
-  .weather{
-    background:linear-gradient(160deg,#31536b,#22394c);
-    color:#f2f6f9;border-radius:14px;
-    padding:28px 28px 24px;position:relative;overflow:hidden;
-  }
-  .weather::after{ /* 빗줄기 시그니처 */
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background-image:repeating-linear-gradient(
-      105deg,transparent 0 26px,rgba(255,255,255,.06) 26px 27px);
-  }
+  .sec-label{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;}
+  .sec-label h2{font-family:'Gowun Batang',serif;font-size:22px;font-weight:700;}
+  .sec-label .en{font-size:12px;letter-spacing:.18em;color:var(--slate);}
+  .weather{background:linear-gradient(160deg,#31536b,#22394c);color:#f2f6f9;
+    border-radius:14px;padding:28px;position:relative;overflow:hidden;}
+  .weather::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(105deg,transparent 0 26px,rgba(255,255,255,.06) 26px 27px);}
   .w-now{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;}
   .w-temp{font-size:56px;font-weight:300;line-height:1;}
   .w-cond{font-size:17px;font-weight:500;padding-bottom:8px;}
-  .w-grid{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:10px 20px;margin-top:22px;font-size:14px;
-  }
+  .w-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px 20px;margin-top:22px;font-size:14px;}
   .w-grid div{border-top:1px solid rgba(255,255,255,.25);padding-top:8px;}
   .w-grid span{display:block;font-size:12px;opacity:.75;margin-bottom:2px;}
-  .w-alert{
-    margin-top:20px;background:rgba(255,255,255,.12);
-    border-left:3px solid #ffce7a;border-radius:0 8px 8px 0;
-    padding:12px 16px;font-size:14px;
-  }
-
-  /* ── 뉴스 ── */
-  .news-item{
-    background:var(--paper);border:1px solid var(--line);
-    border-radius:12px;padding:20px 24px;margin-bottom:14px;
-  }
-  .tag{
-    display:inline-block;font-size:11.5px;font-weight:600;
-    letter-spacing:.08em;color:var(--rain-deep);
-    background:#e3edf4;border-radius:4px;
-    padding:3px 9px;margin-bottom:10px;
-  }
+  .w-alert{margin-top:20px;background:rgba(255,255,255,.12);
+    border-left:3px solid #ffce7a;border-radius:0 8px 8px 0;padding:12px 16px;font-size:14px;}
+  .news-item{background:var(--paper);border:1px solid var(--line);
+    border-radius:12px;padding:20px 24px;margin-bottom:14px;}
+  .tag{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.08em;
+    color:var(--rain-deep);background:#e3edf4;border-radius:4px;padding:3px 9px;margin-bottom:10px;}
   .tag.world{color:#7a4a2b;background:#f3e9df;}
   .tag.econ{color:#3d6b46;background:#e5f0e7;}
-  .news-item h3{
-    font-family:'Gowun Batang',serif;
-    font-size:18px;font-weight:700;margin-bottom:8px;line-height:1.45;
-  }
-  .news-item p{font-size:14.5px;color:var(--slate);}
-  .news-item a{
-    display:inline-block;margin-top:10px;font-size:13px;
-    color:var(--rain);text-decoration:none;font-weight:500;
-    border-bottom:1px solid currentColor;
-  }
-
-  /* ── 캘린더 ── */
-  .cal-empty{
-    border:1.5px dashed var(--line);border-radius:12px;
-    background:var(--paper);padding:32px 28px;text-align:center;
-  }
-  .cal-empty .icon{font-size:30px;margin-bottom:10px;}
-  .cal-empty h3{font-size:16px;font-weight:600;margin-bottom:6px;}
-  .cal-empty p{font-size:14px;color:var(--slate);max-width:440px;margin:0 auto;}
-  .cal-source{
-    margin-top:14px;font-size:12.5px;color:var(--slate);
-  }
-
-  footer{
-    margin-top:60px;padding-top:20px;
-    border-top:1px solid var(--line);
-    font-size:12.5px;color:var(--slate);
-  }
-  @media (prefers-reduced-motion:no-preference){
-    header,section{animation:rise .5s ease both;}
-    section:nth-of-type(2){animation-delay:.08s;}
-    section:nth-of-type(3){animation-delay:.16s;}
-    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  }
+  .news-item h3{font-family:'Gowun Batang',serif;font-size:17.5px;
+    font-weight:700;line-height:1.45;}
+  .news-item .src{font-size:13px;color:var(--slate);margin-top:6px;}
+  .news-item a{display:inline-block;margin-top:10px;font-size:13px;color:var(--rain);
+    text-decoration:none;font-weight:500;border-bottom:1px solid currentColor;}
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--slate);}
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <header>
     <div class="kicker">Daily Briefing · 데일리 브리핑</div>
-    <h1>2026년 8월 30일 일요일,<br>비 내리는 왕십리의 아침</h1>
+    <h1>2026년 9월 2일<br>수요일의 브리핑</h1>
     <div class="meta">기준 지역 · <strong>서울 성동구 상왕십리역</strong> 일대</div>
   </header>
 
-  <!-- 날씨 -->
   <section>
     <div class="sec-label"><h2>오늘의 날씨</h2><span class="en">WEATHER</span></div>
     <div class="weather">
       <div class="w-now">
-        <div class="w-temp">26~31°</div>
-        <div class="w-cond">☔ 대체로 흐리고 비 · 때때로 소강상태</div>
+        <div class="w-temp">23°</div>
+        <div class="w-cond">🌦️ 대체로 맑음</div>
       </div>
-      <div class="w-grid">
-        <div><span>하늘 상태</span>전국 흐리고 비, 수도권은 소강상태 보이는 곳 있음</div>
-        <div><span>예상 강수량 (30~31일)</span>서울·인천·경기북부 20~60mm</div>
-        <div><span>내일 (8/31)</span>흐리고 비, 저녁 무렵 남부부터 그침</div>
-        <div><span>모레 (9/1)</span>오전까지 중부지방 곳에 따라 비</div>
-      </div>
-      <div class="w-alert">
-        ⚠️ 내일까지 전국 대부분 지역에 비가 이어지며 <strong>돌풍과 천둥·번개</strong>에 유의가 필요합니다. 외출 시 우산을 꼭 챙기시고, 빗길 운전에 주의하세요.
-      </div>
+      <div class="w-grid"><div><span>오늘 최저/최고</span>21° / 28°</div><div><span>강수 확률</span>24%</div><div><span>예상 강수량</span>0.2mm</div><div><span>내일 (09/03)</span>⛅ 구름 조금 · 20~31°</div><div><span>모레 (09/04)</span>☀️ 맑음 · 21~29°</div></div>
+      
     </div>
   </section>
 
-  <!-- 뉴스 -->
   <section>
     <div class="sec-label"><h2>주요 뉴스</h2><span class="en">TOP NEWS</span></div>
-
+    
     <div class="news-item">
-      <span class="tag world">국제 · 재난</span>
-      <h3>히말라야 빙하 붕괴 대홍수 — 네팔·티베트 사망자 680여 명</h3>
-      <p>지난 26일 히말라야 빙하 붕괴로 발생한 대홍수로 네팔과 중국 티베트 접경지에서 최소 682명의 사망자가 확인됐고, 실종자를 포함하면 피해 규모는 3,600여 명에 달합니다. 네팔 정부는 외국 지원 거절 결정을 번복해 한국 등 4개국의 구호를 허용했고, 한국 정부는 합동신속대응팀 9명을 추가 파견합니다. 현장에 고립됐던 한국인 1명(두산에너빌리티 수력발전소 현장소장)은 무사히 대피했습니다.</p>
-      <a href="https://news.google.com/home?hl=ko&gl=KR&ceid=KR%3Ako" target="_blank">관련 뉴스 모아보기 →</a>
+      <span class="tag">주요</span>
+      <h3>靑 “김용범, 개각 다음날 사의표명”… 내각-참모 후속 교체 가능성 - 동아일보</h3>
+      <div class="src">동아일보</div>
+      <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9uRVRlZ195a2dael9fa0RsanNLaVhaV1c1Z0RsNjZBRjNpeGdBRlVYRzdmNGpYdUNiRkVsbVlsOGF4YzZyb2c4Z2NmUVpoM0kwekx2NUs2dDVaME9FY2xwSkVxaUZEOEdGazFWdzZGZmRfbTh6UXNJ0gFmQVVfeXFMUDhPVjd5Uk5NMWdwcmlhQVRkRDNuTVIyOEJSZTNJRzlHQk1jUl9pUDV1S0RfaHotdGpEdkVnSEFyNEVyMk5OUGEwSkM5T2tSZTVoTjBXdU52WmVaUzRxczU2WnRTSDhB?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
     </div>
-
     <div class="news-item">
-      <span class="tag">국내 · 정치</span>
-      <h3>대법원장 재제청 공방 — 여야 갈등 지속</h3>
-      <p>민주당이 "국민의힘과 조희대 대법원장이 삼권분립을 훼손하고 있다"며 즉시 재제청에 나설 것을 촉구하는 등 사법부 인선을 둘러싼 정치권 공방이 이어지고 있습니다. 아울러 경찰 수사를 총괄하는 국가수사본부장 인사청문회 도입 관련 법안 3건이 발의되는 등 권력기관 인사 검증 논의도 확대되는 분위기입니다.</p>
-      <a href="https://news.daum.net/" target="_blank">관련 뉴스 보기 →</a>
+      <span class="tag">주요</span>
+      <h3>한국 선사 유조선 등 2척 호르무즈서 피격...미·이란 군사 충돌 속 &#x27;불똥&#x27; - KBC광주방송</h3>
+      <div class="src">KBC광주방송</div>
+      <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFBoSTlUMEpBbXB0R2ZpVDd6RXRVQXRYdjlfdE1xU0pNMEJzaWF3SW9DQ0R4ZUdJUG5Ub1NQVWJ2S2hrNDRuNWF4SURsZzZrVWRMdFNxNjBHdWRQUHFWZTQ0NmR3?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
     </div>
-
     <div class="news-item">
-      <span class="tag econ">경제 · 시장</span>
-      <h3>글로벌 기술주 변동성 확대 — 한·미 증시 동조화 심화</h3>
-      <p>미·중 간 AI 기술 공방이 격화되는 가운데 아시아 증시에서 기술주 투매가 나타나 닛케이지수가 4% 급락하는 등 변동성이 커졌습니다. 레버리지 ETF 광풍이 세계 증시의 뇌관이 될 수 있다는 경고와 함께, 한·미 기술주 동조화가 심화되면서 AI 투자 지출이 둔화될 경우 국내 증시 리스크가 확대될 수 있다는 우려도 제기됩니다.</p>
-      <a href="https://news.daum.net/economy" target="_blank">경제 뉴스 더 보기 →</a>
+      <span class="tag">주요</span>
+      <h3>허위 종결 25건…성인 실종이라 안일했다? - 경향신문</h3>
+      <div class="src">경향신문</div>
+      <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sdVNqMnFWME5VSDdJN2VINHhOY0R4UUc2eldFbllQV3gtR2w2N1dpeDRfaEU2SUp0TnZ4b2hVZVVlQ3hwVTVmOE9sQVpDa2o0Yk52UC1kYkpuQdIBX0FVX3lxTFB2Sm9TdE5MMnQxSy11ajVTd1dZSmtWRTVNdy1yMkxqNW9Gd2U3MFZpbDVMaVpuYmhPNWtYVjdfUEN1M284M2RiUjlJbGlPUnEyY0ZsRFA0TDhpRE12ODdF?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
     </div>
-
     <div class="news-item">
-      <span class="tag econ">경제 · 부동산</span>
-      <h3>서울 강동 상일동 5개 빌라단지 통합재건축 추진</h3>
-      <p>서울 강동구 상일동 일대 5개 빌라단지가 1,492가구 규모 아파트로 통합재건축을 추진합니다. 한편 30조 원 규모 추가 대출이 풀렸지만 고금리 부담 속에 일반 주택담보대출은 난항을 겪고 있으며, 새마을금고는 멈췄던 집단대출을 재개했습니다.</p>
-      <a href="https://news.daum.net/economy" target="_blank">부동산 뉴스 보기 →</a>
+      <span class="tag">주요</span>
+      <h3>해외긴급구호대 44명 태운 군 수송기 이륙…현지 도착 후 합동 수색 나설 듯 - KBS 뉴스</h3>
+      <div class="src">KBS 뉴스</div>
+      <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE00ZmI1V1JtQ004alVfQ1pYOXU0TlpVS0kxazh2R24xR0tyRTE0SElzQzVlYzZ6UkJrLVJ6WU1QSHVRMFJFWm1vSWt0S3VCWnRmWGVhczRpWWdxR1E?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
     </div>
-
     <div class="news-item">
-      <span class="tag">산업 · 생활</span>
-      <h3>삼성전자, 무주택 임직원에 최대 5억 원 주거 대출 지원</h3>
-      <p>삼성전자가 다음 달부터 무주택 임직원에게 최대 5억 원의 대출을 지원하는 사내 주거안정 지원 제도를 시행합니다. 이 밖에 생후 1000일 이전 설탕 섭취를 줄인 세대가 성인이 된 뒤 암·치매 위험이 낮았다는 연구 결과도 주목받고 있습니다.</p>
-      <a href="https://www.hankyung.com/" target="_blank">한국경제 보기 →</a>
+      <span class="tag econ">경제</span>
+      <h3>[국채금리 상승 여파] 한미일 동반 급등…증시 위험자산 전반 &#x27;긴장&#x27; - 연합인포맥스</h3>
+      <div class="src">연합인포맥스</div>
+      <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5iNmJlS0tlc3lZVlhCOGdtT3pIT0UtZjdOcXNEdjktYUM1dUk1eDdKN2Y4WVBfY1BpTzVZbWlWVV9NcDlfb1NCcHlEMFJvOUNrbVI2OUlpLUZQYVluU0JxMWkta0tYbmJ1SjlDODl1TEw?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
     </div>
-  </section>
-
-  <!-- 캘린더 -->
-  <section>
-    <div class="sec-label"><h2>오늘의 할 일</h2><span class="en">TODAY'S SCHEDULE · Google Calendar 연동</span></div>
-    <div class="cal-empty">
-      <div class="icon">🌤️</div>
-      <h3>오늘 등록된 일정이 없어요</h3>
-      <p>Google 캘린더(hamyo3521@gmail.com)를 확인했지만 2026년 8월 30일 하루 동안 등록된 이벤트가 없습니다. 비 오는 일요일, 여유롭게 보내셔도 좋겠어요.</p>
-      <div class="cal-source">연동 캘린더: hamyo3521@gmail.com (기본 캘린더) · 확인 시각 기준 최신</div>
+    <div class="news-item">
+      <span class="tag econ">경제</span>
+      <h3>규제 동탄도, 비규제 병점도… 59·84㎡ 집값 상승률 1위 - 조선비즈 - biz.chosun.com</h3>
+      <div class="src">biz.chosun.com</div>
+      <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNUFJQSF9MNTNyOG9OMEF6dnpBOUtxa2NtWkhmVUEwNFRiNEgyckl6SUFGcXB5QmFtVllmUVZ3S0ZMUFRxbnhVWkhMVTRRTFgxa3RYUks4Zkk1dVNKRXhBS1V3ZDhlZHRiRUNueTlLb0Ytb0Vyb25FYXhYZHk0LXMtOTU2Y3hMaUc0UkZQZ2FkWWZ6Ulp6UDVjMtIBrAFBVV95cUxNT2JOaVdpTnZsUHFGNloweDMxQTc5alBsOVp4SmVRSGtEamI4Zmg1UWNPVzhxcXdaai04VU1YMGl1UWx4SkNqRkhEcWEtQ2NtNGV0cEFCQWdPVmFjVTF4N1RWRk8tV3JtVmI1VFphMlpjcWwtR2d6VDBsR25XS2ZqT0pKMVVTQThxQ2VMNE9qZHd4b3lxU3BaRWo3YjZrNXJCUUEwY0tQem43UjJE?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
+    </div>
+    <div class="news-item">
+      <span class="tag econ">경제</span>
+      <h3>8월 수출도 900억달러 돌파…1조 고지 보인다 - 마켓인</h3>
+      <div class="src">마켓인</div>
+      <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE14MkpfdnNra19aV1U2bFJHbGhDRW1hUXFGRnk1VEdvUnEwR1JzbmR0aVd3YXVUaUZqZFBueUN5Z082c0pqOUpBbXJrWTZaSGVEanVCUzd6aEYxdUVyVGV2LWwyb29QbEtaNVhSSVVpcDc5OXM?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
+    </div>
+    <div class="news-item">
+      <span class="tag world">세계</span>
+      <h3>미, 이란 남부 대규모 공습에 이란 미사일·드론 보복…트럼프 “더 큰 공격 대기” - 한겨레</h3>
+      <div class="src">한겨레</div>
+      <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1zdjJSNk5EVW5ManhYSDFFaGlNR2NoVWVsVjNVYnU4MXhxakNZTk5tbFlVS3R0OFdPeDBzYXlVTW1ybG9JVGt4V0NVMTAwNENVUHNkZm1mSWxFSV9DUWVvb1luSWMtMG10MTlpYXhPalhFRUE?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
+    </div>
+    <div class="news-item">
+      <span class="tag world">세계</span>
+      <h3>백악관, 북미회담 대비 ‘北서 미군 유해 발굴’ 문의 - 동아일보</h3>
+      <div class="src">동아일보</div>
+      <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5rOExmN2ltUmdiNVl1SFNnXzlFbEdRQVBpRkpmcnhmMVlTNk8wR0hrak4zS2w1a3FaU1lCVEgyMjRUc2dZM3VIMDhOUGpGZVRlQ0s5NDJfc0NaVkRLSEVDUVJzeWR5N1FyME5ERTFVbVJOYknSAWZBVV95cUxPSDVnWXJrclAxRTVjQV9IbmhHMUZUV0NzU3h4Nnp5VEcwMFp0eVJPTmlnVnRxWEFHcThSWG5hXzd0UDZDQTd0Zi11amFUcTQ2TnA0Uzl2RTZ2RDZXZllwcmU4ZTlRRkE?oc=5" target="_blank" rel="noopener">기사 보기 →</a>
     </div>
   </section>
 
   <footer>
-    본 리포트는 2026년 8월 30일 기준 기상청 단기예보, 주요 언론 보도, 연동된 Google 캘린더 일정을 바탕으로 작성되었습니다.<br>
-    출처: 기상청 날씨누리 · 다음뉴스 · 구글뉴스 · 한국경제 · Google Calendar
+    이 페이지는 매일 자동으로 갱신됩니다 · 최종 갱신 2026-09-02 08:52 KST<br>
+    출처: Open-Meteo (날씨) · Google News (뉴스)
   </footer>
-
 </div>
 </body>
 </html>
